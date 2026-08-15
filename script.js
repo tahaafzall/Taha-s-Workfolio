@@ -184,6 +184,14 @@ function setupHeroScene() {
   let width = heroSection.clientWidth;
   let height = heroSection.clientHeight;
 
+  // Some mobile browsers report 0 for clientHeight for a brief moment
+  // during initial layout. Building the scene with a 0 dimension breaks
+  // the camera/renderer math, so wait a tick and retry if that happens.
+  if (width === 0 || height === 0) {
+    requestAnimationFrame(() => setupHeroScene());
+    return;
+  }
+
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100);
   camera.position.z = 7;
@@ -226,42 +234,46 @@ function setupHeroScene() {
     targetRotY = (e.clientX / window.innerWidth - 0.5) * 0.6;
     targetRotX = (e.clientY / window.innerHeight - 0.5) * 0.4;
   });
+  window.addEventListener("touchmove", (e) => {
+    if (!e.touches || !e.touches.length) return;
+    const t = e.touches[0];
+    targetRotY = (t.clientX / window.innerWidth - 0.5) * 0.6;
+    targetRotX = (t.clientY / window.innerHeight - 0.5) * 0.4;
+  }, { passive: true });
 
   function resize() {
     width = heroSection.clientWidth;
     height = heroSection.clientHeight;
+    if (width === 0 || height === 0) return;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
   }
   window.addEventListener("resize", resize);
+  window.addEventListener("orientationchange", () => setTimeout(resize, 200));
 
-  let raf;
-  function animate() {
-    mesh.rotation.y += 0.0022;
-    mesh.rotation.x += 0.0009;
-    glowMesh.rotation.y -= 0.0016;
-    glowMesh.rotation.x -= 0.0012;
-    particles.rotation.y += 0.0006;
+  // Use Three.js's built-in animation loop (renderer.setAnimationLoop) instead
+  // of a manual requestAnimationFrame chain — it's the pattern Three.js
+  // recommends for reliability across devices, and it auto-pauses/resumes
+  // correctly when the tab or app is backgrounded (common on mobile).
+  // Each frame is wrapped in try/catch so a single bad frame can't
+  // permanently freeze the animation (which is what a silent JS error
+  // in a plain requestAnimationFrame chain would otherwise cause).
+  renderer.setAnimationLoop(() => {
+    try {
+      mesh.rotation.y += 0.0022;
+      mesh.rotation.x += 0.0009;
+      glowMesh.rotation.y -= 0.0016;
+      glowMesh.rotation.x -= 0.0012;
+      particles.rotation.y += 0.0006;
 
-    scene.rotation.y += (targetRotY - scene.rotation.y) * 0.03;
-    scene.rotation.x += (targetRotX - scene.rotation.x) * 0.03;
+      scene.rotation.y += (targetRotY - scene.rotation.y) * 0.03;
+      scene.rotation.x += (targetRotX - scene.rotation.x) * 0.03;
 
-    renderer.render(scene, camera);
-    raf = requestAnimationFrame(animate);
-  }
-  animate();
-}
-
-// ============================================================
-// Resume download — point both resume links at the embedded
-// base64 copy so download works with no dependency on file paths
-// ============================================================
-function setupResumeLinks() {
-  if (typeof RESUME_DATA_URI === "undefined") return;
-  ["resumeLinkHero", "resumeLinkContact"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.href = RESUME_DATA_URI;
+      renderer.render(scene, camera);
+    } catch (err) {
+      console.warn("Hero scene frame skipped:", err);
+    }
   });
 }
 
@@ -313,7 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  safeRun(setupResumeLinks, "resume links");
   safeRun(setupAnchorScroll, "anchor scroll");
   safeRun(setupCursor, "cursor");
   safeRun(setupProgressBar, "progress bar");
