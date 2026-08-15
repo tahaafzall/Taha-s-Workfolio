@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taha's Workpolio</title>
+<meta name="description" content="Mohammed Taha Afzal — IT Support Specialist pursuing SOC Analyst / Cybersecurity Analyst roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand"><span class="brand-mark"></span>Taha's Workpolio</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about" class="navlink active">About</a>
+      <a href="#experience" class="navlink">Experience</a>
+      <a href="#skills" class="navlink">Skills</a>
+      <a href="#certifications" class="navlink">Certifications</a>
+      <a href="#education" class="navlink">Education</a>
+      <a href="#contact" class="navlink">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== hero ===== -->
+  <section class="hero" id="about">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+      <div class="grid-overlay"></div>
+    </div>
+    <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero-inner">
+      <p class="eyebrow reveal" data-reveal>IT Support Assistant · Aspiring SOC &amp; Cybersecurity Analyst</p>
+      <h1 class="hero-name">
+        <span class="reveal" data-reveal data-delay="1">Mohammed Taha</span>
+        <span class="reveal gradient-text" data-reveal data-delay="2">Afzal</span>
+      </h1>
+      <p class="hero-desc reveal" data-reveal data-delay="3">
+        Computer Science graduate from the University of East London with hands-on experience in
+        IT support, systems administration, and network troubleshooting across startup and
+        enterprise environments. Now working toward a career in cybersecurity — pursuing
+        industry certifications and building practical skills in threat detection, network
+        defense, and endpoint security through hands-on labs and self-directed study.
+      </p>
+      <div class="hero-ctas reveal" data-reveal data-delay="4">
+        <a class="btn btn-primary magnetic" id="resumeLinkHero" href="assets/Taha_Afzal_Resume.pdf" download="Taha_Afzal_Resume.pdf">
+          <span>Download Resume</span>
+        </a>
+        <a class="btn btn-outline magnetic" href="https://www.linkedin.com/in/tahaafzal973212b3" target="_blank" rel="noopener">
+          <span>View LinkedIn</span>
+        </a>
+        <a class="btn btn-outline magnetic" href="https://github.com/tahaafzall" target="_blank" rel="noopener">
+          <span>GitHub</span>
+        </a>
+        <a class="btn btn-outline magnetic" href="#contact">
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ===== highlights ===== -->
+  <section class="highlights" aria-label="Core strengths">
+    <div class="highlights-inner">
+      <div class="highlight reveal" data-reveal>
+        <span class="highlight-icon">🧩</span>
+        <span class="highlight-label">Fast, hands-on learner</span>
+      </div>
+      <div class="highlight reveal" data-reveal data-delay="1">
+        <span class="highlight-icon">🛠️</span>
+        <span class="highlight-label">Practical IT &amp; support experience</span>
+      </div>
+      <div class="highlight reveal" data-reveal data-delay="2">
+        <span class="highlight-icon">🤝</span>
+        <span class="highlight-label">Clear communicator &amp; team player</span>
+      </div>
+      <div class="highlight reveal" data-reveal data-delay="3">
+        <span class="highlight-icon">🎯</span>
+        <span class="highlight-label">Committed to a cybersecurity career</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== experience ===== -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal" data-reveal>Career</p>
+      <h2 class="section-title reveal" data-reveal>Professional Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-job reveal" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="tilt-card job-card">
+            <div class="job-head">
+              <div>
+                <h3 class="job-title">IT Support &amp; Systems Assistant</h3>
+                <p class="job-org">Sterling Support Services (Startup Environment) · London, UK</p>
+              </div>
+              <span class="job-date">Mar 2025 – Jun 2025</span>
+            </div>
+            <ul class="job-list">
+              <li>Delivered comprehensive IT support to 50+ staff members, troubleshooting hardware, software, and network issues with a 95% first-call resolution rate.</li>
+              <li>Installed, configured, and maintained Windows 10/11 systems and Office 365 environments, cutting deployment time by 30% through standardized procedures.</li>
+              <li>Managed Active Directory user accounts, password resets, access permissions, and group policies for secure access control.</li>
+              <li>Provided remote and on-site technical support while maintaining detailed documentation.</li>
+              <li>Performed system updates, security checks, and endpoint protection across company infrastructure.</li>
+              <li>Logged and tracked 200+ support tickets, ensuring timely resolution and proper escalation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-job reveal" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="tilt-card job-card">
+            <div class="job-head">
+              <div>
+                <h3 class="job-title">IT Systems &amp; Application Support Assistant</h3>
+                <p class="job-org">Docklands Creative Team — University of East London · London, UK</p>
+              </div>
+              <span class="job-date">Feb 2025 – May 2025</span>
+            </div>
+            <ul class="job-list">
+              <li>Supported system integration and user access management for 5,000+ students and staff on the UEL Moodle LMS.</li>
+              <li>Troubleshot complex login issues, access permissions, and platform errors, achieving a 98% user satisfaction rate.</li>
+              <li>Collaborated with the development team using GitHub during feature deployment and system updates.</li>
+              <li>Assisted in testing, deployment, and maintenance of web-based application features, resolving bugs pre-deployment.</li>
+              <li>Authored user documentation and ran knowledge-transfer sessions, cutting support tickets by 15%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-job reveal" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="tilt-card job-card">
+            <div class="job-head">
+              <div>
+                <h3 class="job-title">Commis Pastry Chef</h3>
+                <p class="job-org">Carbone · London, UK</p>
+              </div>
+              <span class="job-date">Aug 2025 – Present</span>
+            </div>
+            <ul class="job-list">
+              <li>Execute pastry preparation and plating for high-volume service across 200+ covers daily, maintaining consistency under pressure.</li>
+              <li>Collaborate with the culinary team in a fast-paced kitchen environment, adapting to dynamic service demands.</li>
+              <li>Balance part-time work with full-time academic coursework, demonstrating strong time management and multitasking ability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== skills ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal" data-reveal>Capabilities</p>
+      <h2 class="section-title reveal" data-reveal>Technical Skills</h2>
+
+      <div class="skills-grid">
+        <div class="tilt-card skill-card reveal" data-reveal>
+          <span class="skill-icon">🛡️</span>
+          <h3>Security Fundamentals</h3>
+          <p>Endpoint protection, antivirus management, malware awareness, password management, data protection, patching.</p>
+        </div>
+        <div class="tilt-card skill-card reveal" data-reveal data-delay="1">
+          <span class="skill-icon">🌐</span>
+          <h3>Networking</h3>
+          <p>TCP/IP, DNS, DHCP, IP addressing, router configuration, network troubleshooting.</p>
+        </div>
+        <div class="tilt-card skill-card reveal" data-reveal data-delay="2">
+          <span class="skill-icon">🖥️</span>
+          <h3>IT Support &amp; Sys Admin</h3>
+          <p>Active Directory, Office 365 administration, remote desktop, ticketing systems, system imaging, software deployment.</p>
+        </div>
+        <div class="tilt-card skill-card reveal" data-reveal data-delay="3">
+          <span class="skill-icon">💻</span>
+          <h3>Operating Systems</h3>
+          <p>Windows 10/11, macOS, Windows Server environments.</p>
+        </div>
+        <div class="tilt-card skill-card reveal" data-reveal data-delay="4">
+          <span class="skill-icon">🔧</span>
+          <h3>Development Tools</h3>
+          <p>GitHub (version control), VS Code, Figma.</p>
+        </div>
+        <div class="tilt-card skill-card reveal" data-reveal data-delay="5">
+          <span class="skill-icon">📚</span>
+          <h3>Platforms</h3>
+          <p>Moodle LMS, Windows environment administration, web-based application support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== certifications ===== -->
+  <section class="section" id="certifications">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal" data-reveal>Growth</p>
+      <h2 class="section-title reveal" data-reveal>Certifications &amp; Professional Development</h2>
+
+      <div class="cert-grid">
+        <div class="tilt-card cert-card reveal" data-reveal>
+          <div class="cert-ring" data-pct="55">
+            <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"></circle><circle class="ring-fill" cx="50" cy="50" r="42"></circle></svg>
+            <span class="ring-label">55%</span>
+          </div>
+          <div>
+            <span class="cert-status">In Progress</span>
+            <h3>CompTIA A+ (Core 1 &amp; Core 2)</h3>
+          </div>
+        </div>
+        <div class="tilt-card cert-card reveal" data-reveal data-delay="1">
+          <div class="cert-ring" data-pct="40">
+            <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"></circle><circle class="ring-fill" cx="50" cy="50" r="42"></circle></svg>
+            <span class="ring-label">40%</span>
+          </div>
+          <div>
+            <span class="cert-status">In Progress</span>
+            <h3>Google IT Support Professional Certificate</h3>
+          </div>
+        </div>
+        <div class="tilt-card cert-card reveal" data-reveal data-delay="2">
+          <div class="cert-ring" data-pct="65">
+            <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"></circle><circle class="ring-fill" cx="50" cy="50" r="42"></circle></svg>
+            <span class="ring-label">65%</span>
+          </div>
+          <div>
+            <span class="cert-status">Self-Learning</span>
+            <h3>Cybersecurity Fundamentals, Network &amp; System Security</h3>
+          </div>
+        </div>
+        <div class="tilt-card cert-card reveal" data-reveal data-delay="3">
+          <div class="cert-ring" data-pct="70">
+            <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"></circle><circle class="ring-fill" cx="50" cy="50" r="42"></circle></svg>
+            <span class="ring-label">70%</span>
+          </div>
+          <div>
+            <span class="cert-status">Hands-On</span>
+            <h3>Windows Troubleshooting &amp; System Maintenance Labs</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== education ===== -->
+  <section class="section section-alt" id="education">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal" data-reveal>Background</p>
+      <h2 class="section-title reveal" data-reveal>Education</h2>
+
+      <div class="timeline timeline-slim">
+        <div class="timeline-job reveal" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="tilt-card job-card">
+            <div class="job-head">
+              <div>
+                <h3 class="job-title">BSc (Hons) Computer Science</h3>
+                <p class="job-org">University of East London · London, UK</p>
+              </div>
+              <span class="job-date">June 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-job reveal" data-reveal data-delay="1">
+          <div class="timeline-dot"></div>
+          <div class="tilt-card job-card">
+            <div class="job-head">
+              <div>
+                <h3 class="job-title">Intermediate — Mathematics, Physics, Chemistry</h3>
+                <p class="job-org">St Joseph's Junior College · Hyderabad, India</p>
+              </div>
+              <span class="job-date">July 2022</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-job reveal" data-reveal data-delay="2">
+          <div class="timeline-dot"></div>
+          <div class="tilt-card job-card">
+            <div class="job-head">
+              <div>
+                <h3 class="job-title">Indian Certificate of Secondary Education</h3>
+                <p class="job-org">Mukarram Jah School · Hyderabad, India</p>
+              </div>
+              <span class="job-date">June 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-eyebrow reveal" data-reveal style="margin-top:56px;">Beyond the Desk</p>
+      <h2 class="section-title reveal" data-reveal>Leadership &amp; Extracurricular</h2>
+      <div class="leadership-grid">
+        <div class="tilt-card leadership-card reveal" data-reveal>
+          <span class="leadership-role">Head Boy</span>
+          <span class="leadership-org">Mukarram Jah School · School Tenure</span>
+          <p>Represented the student body and supported school initiatives; liaised between students and administration.</p>
+        </div>
+        <div class="tilt-card leadership-card reveal" data-reveal data-delay="1">
+          <span class="leadership-role">Class Representative</span>
+          <span class="leadership-org">St Joseph's Junior College · Intermediate Year</span>
+          <p>Coordinated between students and faculty, ensuring smooth communication within the academic community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== contact ===== -->
+  <section class="section contact" id="contact">
+    <div class="hero-bg contact-bg" aria-hidden="true">
+      <span class="blob blob-4"></span>
+    </div>
+    <div class="section-inner contact-inner">
+      <p class="section-eyebrow reveal" data-reveal>Let's Talk</p>
+      <h2 class="section-title reveal" data-reveal>Get In Touch</h2>
+      <p class="contact-lede reveal" data-reveal>Open to SOC Analyst, Cybersecurity Analyst, and entry-level IT/security roles. I'd welcome the opportunity to discuss how I can contribute to your team.</p>
+      <div class="contact-grid">
+        <a class="tilt-card contact-card reveal" data-reveal href="mailto:tahaafzal017@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">tahaafzal017@gmail.com</span>
+        </a>
+        <a class="tilt-card contact-card reveal" data-reveal data-delay="1" href="tel:+447901916685">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+44 7901 916685</span>
+        </a>
+        <a class="tilt-card contact-card reveal" data-reveal data-delay="2" href="https://www.linkedin.com/in/tahaafzal973212b3" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">/in/tahaafzal973212b3</span>
+        </a>
+        <a class="tilt-card contact-card reveal" data-reveal data-delay="3" href="https://github.com/tahaafzall" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">/tahaafzall</span>
+        </a>
+        <a class="tilt-card contact-card reveal" data-reveal data-delay="4" id="resumeLinkContact" href="assets/Taha_Afzal_Resume.pdf" download="Taha_Afzal_Resume.pdf">
+          <span class="contact-label">Resume</span>
+          <span class="contact-value">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Mohammed Taha Afzal</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="resume-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
